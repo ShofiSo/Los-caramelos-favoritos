@@ -29,4 +29,10 @@ public class PaqueteCaramelos {
 
         System.out.println("Caramelos restantes en el paquete: " + pilaCaramelos);
     }
-    
+    public static void main(String[] args) {
+        String[] caramelos = {"Rojo", "Amarillo", "Verde", "Amarillo", "Azul", "amarillo", "rojo"};
+        PaqueteCaramelos paquete = new PaqueteCaramelos(caramelos);
+
+        paquete.procesarCaramelos();
+    }
+}

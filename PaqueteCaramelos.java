@@ -10,3 +10,23 @@ public class PaqueteCaramelos {
             pilaCaramelos.push(caramelo); 
         }
     }
+    public void procesarCaramelos() {
+        Stack<String> caramelosDevueltos = new Stack<>(); 
+
+        while (!pilaCaramelos.isEmpty()) {
+            String caramelo = pilaCaramelos.pop();  
+
+            if ("amarillo".equals(caramelo)) {
+                System.out.println("Comiendo caramelo " + caramelo);
+            } else {
+                caramelosDevueltos.push(caramelo);  
+            }
+        }
+        while (!caramelosDevueltos.isEmpty()) {
+            String caramelo = caramelosDevueltos.pop();
+            pilaCaramelos.push(caramelo);  // Acá devolvemos los caramelos al paquete
+        }
+
+        System.out.println("Caramelos restantes en el paquete: " + pilaCaramelos);
+    }
+    
